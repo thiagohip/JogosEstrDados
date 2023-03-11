@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1678499218 source:e:\codeblocks\jogosestrdados\main.cpp
+	"Forca.h"
+	"Velha.h"
+	<windows.h>
+	<unistd.h>
+
+1678489193 source:e:\codeblocks\jogosestrdados\forca.cpp
+	"Forca.h"
+
+1678489658 e:\codeblocks\jogosestrdados\forca.h
+	<iostream>
+
+1678498958 source:e:\codeblocks\jogosestrdados\velha.cpp
+	"Velha.h"
+
+1678498958 e:\codeblocks\jogosestrdados\velha.h
+	<iostream>
+
