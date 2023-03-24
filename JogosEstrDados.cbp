@@ -36,6 +36,8 @@
 		</Compiler>
 		<Unit filename="Forca.cpp" />
 		<Unit filename="Forca.h" />
+		<Unit filename="Senha.cpp" />
+		<Unit filename="Senha.h" />
 		<Unit filename="Velha.cpp" />
 		<Unit filename="Velha.h" />
 		<Unit filename="main.cpp" />

@@ -1,12 +1,14 @@
 #include "Forca.h"
 #include "Velha.h"
-#include<windows.h>
-#include<unistd.h>
+#include "Senha.h"
+//#include <windows.h>
+#include <unistd.h>
 
 using namespace std;
 
 Forca F;
 Velha V;
+Senha S;
 
 int menu(){
     system("cls");
@@ -16,7 +18,8 @@ int menu(){
     std::cout << "=-==-==-==-==-==-==-==-==-==-==-==-==-==-==-=" << std::endl;
     std::cout << "[1]Jogo da Forca" << std::endl;
     std::cout << "[2]Jogo da Velha" << std::endl;
-    std::cout << "[3]Sair do programa" << std::endl;
+    std::cout << "[3]Jogo da Senha" << std::endl;
+    std::cout << "[0]Sair do programa" << std::endl;
     std::cout << "=-==-==-==-==-==-==-==-==-==-==-==-==-==-==-=" << std::endl;
     std::cout << "Opção: ";
     std::cin >> op;
@@ -65,7 +68,6 @@ void forca(){
 }
 
 void velha(){
-
     char tab[3][3], last, esc;
     int jogadas, i, j, x, y;
     bool tru = true, win = false;
@@ -145,6 +147,35 @@ void velha(){
     }while(esc == 'S' || esc == 's');
 }
 
+void senha(){
+    system("cls");
+    S.spass();
+    int acertos=0, jogadas=1;
+    bool acertou=false;
+    do{
+        cout << "Informe o palpite," << endl << "[V]Vermelho - [A]Azul - [P]Preto - [B]Branco" << endl;
+        cout << "Jogadas: " << jogadas;
+        for(int i=0; i<4; i++){
+            cin >> S.ppass[i];
+        }
+        acertos=S.check();
+        if(acertos == 4){
+            acertou = true;
+        }else{
+            jogadas++;
+            cout << acertos << " acertos" << endl;
+        }
+    }while(jogadas<=10 && !acertou);
+    if(acertou){
+        cout << "Parabéns! Você acertou.";
+    }else{
+        cout << "Que pena! Você perdeu, a senha era: ";
+        for(int i=0; i<4; i++){
+            cout << S.gpass[i] << " ";
+        }
+    }
+}
+
 int main(){
     do{
         int op = menu();
@@ -152,9 +183,11 @@ int main(){
             forca();
         }else if(op == 2){
             velha();
+        }else if(op == 3){
+            senha();
         }else{
             break;
         }
-    }while(TRUE);
+    }while(true);
     return 0;
 }

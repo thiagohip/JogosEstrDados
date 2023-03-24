@@ -17,3 +17,27 @@
 1678498958 e:\codeblocks\jogosestrdados\velha.h
 	<iostream>
 
+1679652684 source:/home/alunos/JogosEstrDados/Forca.cpp
+	"Forca.h"
+
+1679654827 /home/alunos/JogosEstrDados/Forca.h
+	<iostream>
+
+1679654631 source:/home/alunos/JogosEstrDados/main.cpp
+	"Forca.h"
+	"Velha.h"
+	"Senha.h"
+	<unistd.h>
+
+1679652684 /home/alunos/JogosEstrDados/Velha.h
+	<iostream>
+
+1679652684 source:/home/alunos/JogosEstrDados/Velha.cpp
+	"Velha.h"
+
+1679653442 source:/home/alunos/JogosEstrDados/Senha.cpp
+	"Senha.h"
+
+1679654209 /home/alunos/JogosEstrDados/Senha.h
+	<iostream>
+
